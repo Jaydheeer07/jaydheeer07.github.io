@@ -1,0 +1,167 @@
+/*=============== FOOTER ===============*/
+.footer{
+    width: 100%;
+    margin-top: 75px;
+    padding-bottom: 15px;
+    background: #00cc66;
+
+    .main-container{
+        display: flex;
+        
+        .left .content{
+            p{
+                text-align: justify;
+            }
+            .social{
+                margin: 20px 0 0;
+                a{
+                    padding: 0 2px;
+                    span{
+                        height: 40px;
+                        width: 40px;
+                        background: #1a1a1a;
+                        line-height: 40px;
+                        text-align: center;
+                        font-size: 18px;
+                        border-radius: 5px;
+                        transition: 0.3s;
+                    }
+                    span:hover{
+                        background: #2196f3;
+                    }
+                }
+            }
+        }
+        .box{
+            flex-basis: 50%;
+            padding: 10px 20px;
+            
+            .content{
+                margin: 20px 0 0;
+                position: relative;
+            }
+            content::before{
+                position: absolute;
+                content: "";
+                top: -10px;
+                height: 2px;
+                width: 100px;
+                background: #1a1a1a;
+            }
+            content::after{
+                position: absolute;
+                content: "";
+                height: 2px;
+                width: 15%;
+                background: #2196f3;
+                top: 10px;
+            }
+            h2{
+                font-size: 1.4735rem;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        }
+        .center .content{
+            span.fas{
+                height: 45px;
+                width: 45px;
+                line-height: 45px;
+                text-align: center;
+                border-radius: 50%;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+            .fas:hover{
+                background: #f12020;
+            }
+            .text{
+                font-size: 1.0625rem;
+                font-weight: 500;
+                padding-left: 10px;
+            }
+            .phone{
+                margin: 15px 0;
+            }
+        }
+        .right form{
+            .text{
+                font-size: 1.0625rem;
+                margin-bottom: 2px;
+                color: #656565;
+            }
+            .msg{
+                margin-top: 10px;
+            }
+            input, textarea{
+                width: 100%;
+                font-size: 1.0625rem;
+                background: #151515;
+                padding-left: 10px;
+                border: 1px solid #222222;
+                outline: none;
+                color: #ffffff;
+            }
+            input:focus,
+            textarea:focus{
+                outline-color: #3498db;
+            } 
+            input{
+                outline: none;
+                color: #ffffff;
+                height: 35px;
+            }
+            .btn{
+                margin-top: 10px;
+
+                button{
+                    height: 40px;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    background: #f12020;
+                    font-size: 1.0625rem;
+                    font-weight: 500;
+                    cursor: pointer;
+                    transition: .3s;
+                }
+                button:hover{
+                    background: rgb(158, 140, 140);
+                }
+            }
+
+        }
+    }
+    .bottom .footnote{
+        padding-top: 50px;
+        font-size: 0.9375rem;
+        background: #00cc66;
+        text-align: center;
+
+        span{
+            color: #656565;
+        }
+           
+        a{
+            color: #2196f3;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    } 
+}
+
+@media (max-width: 900px) {
+    .footer{
+        position: relative;
+        bottom: 0;
+    }
+    .main-container{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-container .box{
+        margin: 5px 0;
+    }
+}

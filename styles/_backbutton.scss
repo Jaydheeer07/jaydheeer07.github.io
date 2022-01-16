@@ -1,0 +1,21 @@
+#backBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 4; 
+    border: none; 
+    outline: none;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    color: white;
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 10px; 
+    font-size: 18px; 
+
+    #backBtn:hover {
+        background-color: #0259fa;
+      }
+  }
+  
+  

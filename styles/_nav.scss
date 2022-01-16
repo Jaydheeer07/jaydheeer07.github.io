@@ -1,0 +1,134 @@
+/*=============== Navbar ===============*/
+.container {
+    height: 60px;
+    background-color: hsl(var(--hue), 4%, 15%);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    .logo {
+        max-width: 250px;
+        padding: 0 10px;
+        overflow: hidden;
+
+        a {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            height: 60px;
+
+            img {
+                max-width: 225px;
+                max-height: 175px;
+            }
+        }
+    }
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        padding: 0 10px;
+        z-index: 5;
+
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li a {
+                text-decoration: none;
+                color: #999999;
+                font-size: 14px;
+                text-transform: uppercase;
+                display: block;
+                height: 60px;
+                line-height: 60px;
+                cursor: pointer;
+                padding: 0 10px;
+            }
+
+            li a:hover {
+                color: #ffffff;
+                background-color: #00cc66;
+            }
+
+            .close {
+                display: none;
+                text-align: right;
+                padding: 10px;
+
+                span {
+                    font-size: 40px;
+                    display: inline-block;
+                    border: 1px solid #cccccc;
+                    padding: 0 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .icon-bar {
+            padding: 18px 8px;
+            width: 50px;
+            height: 60px;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+
+            i {
+                background-color: #000000;
+                height: 2.5px;
+            }
+        }
+    }
+}
+ 
+@media only screen and (max-width: 768px) {
+    .container {
+      justify-content: space-between;
+
+      .logo{
+          flex: 1;
+       }
+
+      .navbar{
+          flex:0;
+
+          ul {
+            flex-wrap: nowrap;
+            position: fixed;
+            left: 100%;
+            flex-direction: column;
+            background: #ffffff;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            transition: left .3s;
+
+            li a {
+                padding: 10px;
+                font-size: 16px;
+                height: auto;
+                line-height: normal;
+                color: #555555;
+            }
+
+            .close{
+                display: block;
+            }
+        }
+        .icon-bar{
+            display: flex;
+        }
+        .Menus-show{
+            left:0;
+        }
+
+      }
+
+    }
+}
